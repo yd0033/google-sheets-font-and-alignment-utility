@@ -3,13 +3,15 @@ function adjustFontAndAlignment() {
   var sheet = spreadsheet.getActiveSheet();
   var range = sheet.getDataRange();
 
-  // フォントサイズとフォントを指定
-  var fontSize = 10;  // フォントサイズを調整する値
+  // フォントとフォントサイズとフォントカラーを指定
   var fontName = "Arial";  // フォントを指定
+  var fontSize = 12;  // フォントサイズを調整する値
+  var fontColor = "black" // フォントカラーを指定
 
-  // データ範囲内のセルに対してフォントサイズとフォントを設定
-  range.setFontSize(fontSize);
+  // データ範囲内のセルに対してフォントとフォントサイズとフォントカラーを設定
   range.setFontFamily(fontName);
+  range.setFontSize(fontSize);
+  range.setFontColor(fontColor);
 
   // ヘッダー（A列からG列）を水平方向のテキスト位置を中央に固定
   var headerRange = sheet.getRange("A1:G1");
