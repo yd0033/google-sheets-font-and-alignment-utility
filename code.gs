@@ -28,4 +28,7 @@ function adjustFontAndAlignment() {
   // G列のデータレンジを水平方向のテキスト位置を右寄せに固定
   var columnGRange = sheet.getRange("G2:G" + sheet.getLastRow());
   columnGRange.setHorizontalAlignment("right");
+
+  // データ範囲内のセルに枠線を追加
+  range.setBorder(true, true, true, true, true, true);
 }
